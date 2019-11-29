@@ -11,7 +11,7 @@
     </div>
     <div class="list">
       <div class="user-list">
-        <van-cell class="cellt" icon="records" title="我的订单" is-link />
+        <van-cell class="cellt" icon="records" @click="Order()" title="我的订单" is-link />
         <van-cell class="cellb" icon="gold-coin-o" title="优惠券" is-link/>
       </div>
       <div class="user-list">
@@ -29,6 +29,9 @@ export default {
     return{};
   },
   methods: {
+    Order(){
+      this.$router.push("/order");
+    },
     JumpReg(){
       this.$router.push("/Reg");
     },

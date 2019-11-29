@@ -65,22 +65,22 @@ export default {
       var teg = /^1(3|4|5|7|8)\d{9}$/;
       var reg = /^[a-z0-9]{3,12}$/i;
       //2:获取用户输入 手机号/密码
-      var u = this.phone;
-      var p = this.upwd;
+      var u = this.upwd;
+      var p = this.phone;
       console.log(u + "_" + p);
       //3:验证手机号如果不匹配
-      if (!teg.test(u)) {
+      if (!teg.test(p)) {
         this.$messagebox("消息", "手机格式不正确");
         return;
       }
       //4:验证密码如果不匹配
-      if (!reg.test(p)) {
+      if (!reg.test(u)) {
         this.$messagebox("消息", "密码格式不正确");
         return;
       }
       //5:发送ajax请求完成登录验证
       var url = "/use/login";
-      var obj = { phone: u, upwd: p };
+      var obj = { phone: p, upwd: u };
       this.axios.get(url, { params: obj }).then(res => {
         console.log(res.data.code);
         if (res.data.code == 1) {

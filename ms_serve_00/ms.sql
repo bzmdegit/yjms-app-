@@ -22,10 +22,8 @@ SET time_zone = "+00:00";
 -- Database: `ms`
 --
 
-SET NAMES UTF8;
-DROP DATABASE IF EXISTS ms;
-CREATE DATABASE ms CHARSET = UTF8;
-USE ms;
+
+USE app_ms02;
 
 
 -- --------------------------------------------------------

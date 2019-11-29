@@ -114,7 +114,7 @@ router.get("/reg",(req,res)=>{
     var user_phone=req.query.phone;
     var user_pwd=req.query.upwd;
     var sql="INSERT INTO ms_user VALUE (null,null,?,null,?,null,null,null,null)";
-    pool.query(sql,[user_pwd,user_phone],(err,result)=>{
+    pool.query(sql,[user_phone,user_pwd],(err,result)=>{
         //if(err){throw err;}
         if(result.affectedRows>0){
             res.send({code:1,data:"注册成功"});

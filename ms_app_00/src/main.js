@@ -12,7 +12,7 @@ import Calendar from 'vue-mobile-calendar'
 //引入第三方 axios
 import axios from "axios"
 //配置访问服务器基础路径
-axios.defaults.baseURL="http://127.0.0.1:3000/"
+axios.defaults.baseURL="http://ms02.applinzi.com"
 Vue.use(MintUI)
 Vue.use(Vant)
 Vue.use(Calendar)

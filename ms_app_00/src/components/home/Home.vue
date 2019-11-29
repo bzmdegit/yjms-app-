@@ -183,8 +183,8 @@ export default {
     return {
       minDate: new Date(), //设置过期时间为当天
       show: false,
-      date: '["2019-11-26","2019-11-27"]',
-      defaultDate: ["2019-11-26", "2019-11-27"]
+      date: '["2019-11-30","2019-12-01"]',
+      defaultDate: ["2019-11-30","2019-12-01"]
     };
   },
   methods: {
